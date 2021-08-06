@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Consulta DAF</string>
+    <string name="selecionar_comando">Selecione o comando desejado:</string>
+    <string name="selecionar_opcao">Selecione uma opção</string>
+    <string name="msg_env_daf">Mensagem a ser enviada ao DAF:</string>
+    <string name="resp_daf">Resposta do DAF:</string>
+    <string name="caixa_de_msgs">Caixa de mensagens</string>
+    <string name="executar">Executar</string>
+    <string name="informa_es">Informações</string>
+    <string name="n_mero_de_autoriza_es_retidas">Número de autorizações retidas</string>
+    <string name="identificador_nico_do_daf">Identificador único do DAF</string>
+    <string name="modo_de_opera_o">Modo de operação</string>
+    <string name="vers_o_do_software_b_sico">Versão do software básico</string>
+    <string name="resumo_criptogr_fico_do_software_b_sico">Resumo criptográfico do software básico</string>
+    <string name="fabricante">Fabricante</string>
+    <string name="modelo_do_daf">Modelo do DAF</string>
+    <string name="contador_monot_nico">Contador monotônico</string>
+    <string name="certificado_digital_da_sef">Certificado digital da SEF</string>
+    <string name="estado_atual_do_daf">Estado atual do DAF</string>
+    <string name="limite_m_ximo_de_autoriza_es">Limite máximo de autorizações</string>
+    <string name="identificadores_nicos_das_autoriza_es">Identificadores únicos das autorizações</string>
+    <string name="aguardando_um_comando_ser_selecionado">Aguardando um comando ser selecionado…</string>
+    <string name="recep_o_do_ack">Recepção do ACK</string>
+    <string name="aguardando_um_comando_ser_executado">Aguardando um comando ser executado…</string>
+    <string name="envio_do_ack">Envio do ACK</string>
+    <string name="autoriza_es_retidas">Autorizações Retidas</string>
+    <string name="n_o_h_autoriza_es_n_retidas">Não há autorizações\n retidas</string>
+    <string name="consultar_informa_es">Consultar Informações</string>
+    <string name="depura_o">Depuração</string>
+    <string name="aguardando_dispositivo_ser_conectado">Aguardando um DAF ser conectado.</string>
+    <string name="aguardado_daf_ficar_pronto">Aguardando DAF ficar pronto.</string>
+    <string name="repo_daf_pi">Abrir repositório DAF-pi</string>
+    <string name="informa_es_sobre_o_consulta_daf">Informações sobre o Consulta DAF</string>
+    <string name="texto_info_app">Para utilizar o Consulta DAF, é necessário possuir um Dispositivo Autorizador Fiscal (DAF) conectado a porta USB deste dispositivo.</string>
+    <string name="texto_info_app2">Caso você ainda não possua um DAF, você pode utilizar um DAF-pi. Veja mais detalhes na URL abaixo:\n\nhttps://github.com/ifsc-lased/daf-pi</string>
+    <string name="tentar_novamente">tentar novamente</string>
+    <string name="encerrar_aplicativo">Encerrar aplicativo</string>
+    <string-array name="comandos">
+        <item>Consultar Informações</item>
+    </string-array>
+</resources>

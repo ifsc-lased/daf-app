@@ -1,0 +1,79 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@+id/myCoordinatorLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.example.dafpaf.consultadaf.MainActivity">
+
+        <TextView
+            android:id="@+id/textoDaf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:text="@string/informa_es_sobre_o_consulta_daf" />
+
+
+        <TextView
+            android:id="@+id/textoDafConteudo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="0dp"
+            android:textColor="@color/black"
+            android:layout_below="@id/textoDaf"
+            android:paddingStart="15dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="15dp"
+            android:textSize="16sp"
+            android:text="@string/texto_info_app"
+            android:autoLink="all"/>
+
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/black"
+            android:background="@drawable/bordas_botao"
+            android:layout_below="@id/textoDafConteudo"
+            android:paddingStart="15dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="15dp"
+            android:text="@string/tentar_novamente"
+            android:autoLink="all"/>
+
+        <TextView
+            android:id="@+id/textoDafConteudo2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/black"
+            android:layout_below="@id/btnVoltar"
+            android:paddingStart="15dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="15dp"
+            android:textSize="16sp"
+            android:text="@string/texto_info_app2"
+            android:autoLink="all"/>
+
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

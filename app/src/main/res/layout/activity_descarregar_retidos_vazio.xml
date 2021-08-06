@@ -1,0 +1,72 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myCoordinatorLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.dafpaf.consultadaf.MainActivity"
+        android:background="#68AAAAAA">
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:text="@string/autoriza_es_retidas"
+            />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/titulo"
+            android:background="@color/white"
+            >
+
+            <LinearLayout
+                android:id="@+id/idLiR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:id="@+id/image_daf"
+                    android:layout_width="200dp"
+                    android:layout_height="135dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/document_icon"
+                    android:layout_marginTop="200dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/rts"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:gravity="center"
+                    android:text="@string/n_o_h_autoriza_es_n_retidas" />
+
+            </LinearLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
