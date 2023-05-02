@@ -110,15 +110,15 @@ public class MainActivity extends AppCompatActivity {
     private TextView textoDaf;
     private TextView textoMop;
     private TextView textoVsb;
-    private TextView textoHsb;
+    private TextView textoSig;
     private TextView textoFab;
     private TextView textoMdl;
     private TextView textoCnt;
-    private TextView textoCrt;
+    private TextView textoCfp;
     private TextView textoEst;
     private TextView textoMxd;
     private TextView textoNdf;
-    private TextView textoRts;
+    //private TextView textoRts;
     private TextView display;
     private TextView displayACKRx;
     private TextView displayACKTx;
@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
     public Button exibirXML;
     private static final PafVirtual paf = new PafVirtual();
     private static Animation myFadeInAnimation;
-
+    private static String ndfAux;
     /**
      * Quando o botão "voltar" é pressionado retorna para o menu ou encerra a aplicação.
      */
@@ -415,15 +415,15 @@ public class MainActivity extends AppCompatActivity {
         textoDaf = findViewById(R.id.textDaf);
         textoMop = findViewById(R.id.textMop);
         textoVsb = findViewById(R.id.textvsb);
-        textoHsb = findViewById(R.id.texthsb);
+        textoSig = findViewById(R.id.textSig);
         textoFab = findViewById(R.id.textfab);
         textoMdl = findViewById(R.id.textMdl);
         textoCnt = findViewById(R.id.textcnt);
-        textoCrt = findViewById(R.id.textCrt);
+        textoCfp = findViewById(R.id.textCfp);
         textoEst = findViewById(R.id.textEst);
         textoMxd = findViewById(R.id.textMxd);
         textoNdf = findViewById(R.id.textNdf);
-        textoRts = findViewById(R.id.textRts);
+        //textoRts = findViewById(R.id.textRts);
 
         // Define timeout para reenvio do comando para ressincronização do protocolo
         timeoutMain = this::iniciaConsultarInfo;
@@ -453,7 +453,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Envia um pedido de consultarInformacoes pela serial
         try {
-            fiscal.getConsultarInformacoes();
+            fiscal.getConsultarAutorizacoes(ndfAux);
         } catch (IOException ioException) {
             ioException.printStackTrace();
         }
@@ -556,6 +556,12 @@ public class MainActivity extends AppCompatActivity {
                     data = Ferramentas.formataString(data);
                     editText.setText(data);
                 }
+
+                if (item_comando.equals("Consultar Autorizações")){
+                    String data = paf.getConsultarAutorizacoes(ndfAux);
+                    data = Ferramentas.formataString(data);
+                    editText.setText(data);
+                }
                 // Outros comandos podem ser adicionados aqui
             }
 
@@ -578,6 +584,18 @@ public class MainActivity extends AppCompatActivity {
                     if (usbService != null) { // if UsbService was correctly binded, Send data
                         try {
                             fiscal.getConsultarInformacoes();
+                        } catch (IOException ioException) {
+                            ioException.printStackTrace();
+                        }
+                    }
+                }
+            }
+
+            if (item_comando.equals("Consultar Autorizações")){
+                if (!editText.getText().toString().equals("")) {
+                    if (usbService != null) { // if UsbService was correctly binded, Send data
+                        try {
+                            fiscal.getConsultarAutorizacoes(ndfAux);
                         } catch (IOException ioException) {
                             ioException.printStackTrace();
                         }
@@ -781,30 +799,30 @@ public class MainActivity extends AppCompatActivity {
                     String daf = jsonObject.get("daf").toString();
                     String mop = jsonObject.get("mop").toString();
                     String vsb = jsonObject.get("vsb").toString();
-                    String hsb = jsonObject.get("hsb").toString();
+                    String sig = jsonObject.get("sig").toString();
                     String fab = jsonObject.get("fab").toString();
                     String mdl = jsonObject.get("mdl").toString();
                     String cnt = jsonObject.get("cnt").toString();
-                    String crt = jsonObject.get("crt").toString();
+                    String cfp = jsonObject.get("cfp").toString();
                     String est = jsonObject.get("est").toString();
                     String mxd = jsonObject.get("mxd").toString();
                     String ndf = jsonObject.get("ndf").toString();
-                    String rts = jsonObject.get("rts").toString();
+                    //String rts = jsonObject.get("rts").toString();
 
-                    rts = Ferramentas.formataItens(rts);
+                    //rts = Ferramentas.formataItens(rts);
                     mActivity.get().textoDaf.append(daf);
                     mActivity.get().textoMop.append(mop);
                     mActivity.get().textoVsb.append(vsb);
-                    mActivity.get().textoHsb.append(hsb);
+                    mActivity.get().textoSig.append(sig);
                     mActivity.get().textoFab.append(fab);
                     mActivity.get().textoMdl.append(mdl);
                     mActivity.get().textoCnt.append(cnt);
-                    mActivity.get().textoCrt.append(crt);
+                    mActivity.get().textoCfp.append(cfp);
                     mActivity.get().textoEst.append(est);
                     mActivity.get().textoMxd.append(mxd);
                     mActivity.get().textoNdf.append(ndf);
-                    mActivity.get().textoRts.append(rts);
-
+                    //mActivity.get().textoRts.append(rts);
+                    ndfAux = ndf;
                     // Desativa o timeout para reenvio da mensagem Consultar Informações
                     mActivity.get().desativaTimeout();
                 }else{

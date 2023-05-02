@@ -121,14 +121,14 @@
                     android:background="@android:color/darker_gray"/>
 
                 <TextView
-                    android:id="@+id/hsb"
+                    android:id="@+id/sig"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingStart="10dp"
                     android:layout_marginTop="15dp"
-                    android:text="@string/resumo_criptogr_fico_do_software_b_sico" />
+                    android:text="@string/assinatura_sef_do_firmware"/>
                 <TextView
-                    android:id="@+id/texthsb"
+                    android:id="@+id/textSig"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -221,14 +221,14 @@
                     android:background="@android:color/darker_gray"/>
 
                 <TextView
-                    android:id="@+id/crt"
+                    android:id="@+id/cfp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingStart="10dp"
                     android:layout_marginTop="15dp"
-                    android:text="@string/certificado_digital_da_sef" />
+                    android:text="@string/impress_o_digital_do_certificado_digital_da_sef" />
                 <TextView
-                    android:id="@+id/textCrt"
+                    android:id="@+id/textCfp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -315,31 +315,7 @@
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
                     android:background="@drawable/bordas" />
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@android:color/darker_gray"/>
 
-                <TextView
-                    android:id="@+id/rtd"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="10dp"
-                    android:layout_marginTop="15dp"
-                    android:text="@string/identificadores_nicos_das_autoriza_es" />
-                <TextView
-                    android:id="@+id/textRts"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="monospace"
-                    android:textSize="14sp"
-                    android:textColor="@color/black"
-                    android:paddingTop="5dp"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
-                    android:background="@drawable/bordas" />
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"

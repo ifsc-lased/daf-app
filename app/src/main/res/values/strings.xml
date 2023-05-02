@@ -13,11 +13,11 @@
     <string name="identificador_nico_do_daf">Identificador único do DAF</string>
     <string name="modo_de_opera_o">Modo de operação</string>
     <string name="vers_o_do_software_b_sico">Versão do software básico</string>
-    <string name="resumo_criptogr_fico_do_software_b_sico">Resumo criptográfico do software básico</string>
+    <string name="assinatura_sef_do_firmware">Assinatura SEF do firmware</string>
     <string name="fabricante">Fabricante</string>
     <string name="modelo_do_daf">Modelo do DAF</string>
     <string name="contador_monot_nico">Contador monotônico</string>
-    <string name="certificado_digital_da_sef">Certificado digital da SEF</string>
+    <string name="impress_o_digital_do_certificado_digital_da_sef">Impressão digital do certificado digital da SEF</string>
     <string name="estado_atual_do_daf">Estado atual do DAF</string>
     <string name="limite_m_ximo_de_autoriza_es">Limite máximo de autorizações</string>
     <string name="identificadores_nicos_das_autoriza_es">Identificadores únicos das autorizações</string>
@@ -39,5 +39,6 @@
     <string name="encerrar_aplicativo">Encerrar aplicativo</string>
     <string-array name="comandos">
         <item>Consultar Informações</item>
+        <item>Consultar Autorizações</item>
     </string-array>
 </resources>

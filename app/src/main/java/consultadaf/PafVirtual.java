@@ -16,4 +16,7 @@ public class PafVirtual {
     public String getConsultarInformacoes() {
         return "{\"msg\":8}";
     }
+    public String getConsultarAutorizacoes(String ndf) {
+        return "{\"msg\":16, \"ini\":1, \"fim\":"+ ndf +"}";
+    }
 }

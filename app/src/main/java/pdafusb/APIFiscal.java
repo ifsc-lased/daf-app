@@ -34,6 +34,15 @@ public class APIFiscal extends Camada{
     }
 
     /**
+     * Envia um comando consultarAutorizações
+     * @throws IOException
+     */
+    public void getConsultarAutorizacoes(String ndf) throws IOException {
+        String dados = "{\"msg\":16, \"ini\":1, \"fim\":"+ndf+"}";
+        this.envia((byte)-1, dados.getBytes(), (byte)0x01);
+    }
+
+    /**
      * Mensagens que são recebidas da camada inferior (ARQ)
      * @param data campo Dados
      * @param tipo campo Comando
